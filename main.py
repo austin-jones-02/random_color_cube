@@ -10,26 +10,34 @@ color options from the image of all tkinter colors.
 """
 
 from tkinter import *
+from random import choice
 
-def putTextOnScreen():
-    print("Button pressed...")
+
+def random_color_chosen():
+    """Randomly choses a color from the supported list for Tkinter Utilizing random.choice"""
+    color_options = ["snow", "deep sky blue", "gold", "SlateBlue2", "SpringGreen2", "brown4", "purple1"]
+
+    selected_random_color = choice(color_options)
+    print(selected_random_color)
+    
+    return selected_random_color
+
+
+def color_changer():
+    root.configure(background=random_color_chosen())
 
 root = Tk()
 
 root.title("Random color cube")
 root.geometry("500x500")
-root.configure(bg="ivory3") # Intersting... doing background or bg accomplishes the same thing
-# You can also do root["bg"] = "black"
+
 
 button = Button(root,
                 text="Hey what's up guys?",
                 cursor="hand2",
-                command=putTextOnScreen)
+                command=color_changer)
 
 button.pack(padx=20, pady=20)
-
-
-
 
 
 # Run the program
