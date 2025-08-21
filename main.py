@@ -11,13 +11,12 @@ color options from the image of all tkinter colors.
 
 from tkinter import *
 from random import choice
+from tkinter_colors import full_list_of_colors
 
 
 def random_color_chosen():
     """Randomly choses a color from the supported list for Tkinter Utilizing random.choice"""
-    color_options = ["snow", "deep sky blue", "gold", "SlateBlue2", "SpringGreen2", "brown4", "purple1"]
-
-    selected_random_color = choice(color_options)
+    selected_random_color = choice(full_list_of_colors)
     print(selected_random_color)
     
     return selected_random_color
