@@ -15,7 +15,7 @@ from tkinter_colors import full_list_of_colors
 
 
 def random_color_chosen():
-    """Randomly choses a color from the supported list for Tkinter Utilizing random.choice"""
+    """Randomly choses a color from the supported list for Tkinter utilizing random.choice"""
     selected_random_color = choice(full_list_of_colors)
     print(selected_random_color)
     
@@ -24,6 +24,7 @@ def random_color_chosen():
 
 def color_changer():
     root.configure(background=random_color_chosen())
+    root.after(1000, color_changer)
 
 root = Tk()
 
@@ -32,7 +33,7 @@ root.geometry("500x500")
 
 
 button = Button(root,
-                text="Hey what's up guys?",
+                text="Change color of background",
                 cursor="hand2",
                 command=color_changer)
 

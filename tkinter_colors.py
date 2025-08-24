@@ -483,5 +483,5 @@ full_list_of_colors = [
     "gray96",
     "gray97",
     "gray98",
-    "gray99",""
+    "gray99"
 ]   
